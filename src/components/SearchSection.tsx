@@ -194,13 +194,13 @@ export default function SearchSection() {
             {results.length > 0 && (
                 <section className="w-full px-4 md:px-8 lg:px-16 py-8 md:py-12 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 border-t border-amber-500/10">
                     <div className="max-w-6xl mx-auto bg-slate-800/50 rounded-2xl overflow-hidden border border-amber-500/20 backdrop-blur-sm">
-                        {/* Result Header with Gold */}
-                        <div className="bg-gradient-to-r from-amber-400/80 to-amber-500/80 px-6 md:px-8 py-5 md:py-6 flex items-center justify-between flex-wrap gap-2">
-                            <h3 className="font-bold text-slate-900 flex items-center gap-2 text-sm md:text-base">
+                        {/* Result Header with Dark Green for Success */}
+                        <div className="bg-gradient-to-r from-emerald-600 to-green-600 px-6 md:px-8 py-5 md:py-6 flex items-center justify-between flex-wrap gap-2">
+                            <h3 className="font-bold text-white flex items-center gap-2 text-sm md:text-base">
                                 <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                                 {results.length === 1 ? 'Verification Successful' : `${results.length} Matches Found`}
                             </h3>
-                            {results.length === 1 && <span className="text-xs font-bold bg-slate-900/20 text-slate-900 px-2 py-1 rounded uppercase tracking-wider">Eligible</span>}
+                            {results.length === 1 && <span className="text-xs font-bold bg-white/20 text-white px-2 py-1 rounded uppercase tracking-wider">Eligible</span>}
                         </div>
 
                         {results.length === 1 ? (
@@ -209,44 +209,44 @@ export default function SearchSection() {
                                 <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                                     <div className="space-y-4 md:space-y-6">
                                         <div>
-                                            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Enrollment Number</span>
-                                            <span className="text-xl md:text-2xl font-black text-amber-400">{results[0].EnrollmentNo}</span>
+                                            <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Enrollment Number</span>
+                                            <span className="text-xl md:text-2xl font-black text-emerald-400">{results[0].EnrollmentNo}</span>
                                         </div>
                                         <div>
-                                            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Full Name</span>
+                                            <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Full Name</span>
                                             <span className="text-lg md:text-xl font-bold text-white">{results[0].Name}</span>
                                         </div>
                                         <div>
-                                            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Bar Association</span>
+                                            <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Bar Association</span>
                                             <span className="text-base md:text-lg font-medium text-slate-200">{results[0].BarAssociation}</span>
                                         </div>
                                     </div>
 
                                     <div className="space-y-4 md:space-y-6">
                                         <div>
-                                            <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Father's Name</span>
+                                            <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Father's Name</span>
                                             <span className="text-base md:text-lg font-medium text-slate-200">{results[0].FatherName}</span>
                                         </div>
                                         <div className="flex gap-6 md:gap-8">
                                             <div>
-                                                <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Gender</span>
+                                                <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Gender</span>
                                                 <span className="text-base md:text-lg font-medium text-slate-200">{results[0].Gender}</span>
                                             </div>
                                             <div>
-                                                <span className="text-xs font-bold text-amber-400 uppercase tracking-widest block mb-1">Location</span>
+                                                <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">Location</span>
                                                 <span className="text-base md:text-lg font-medium text-slate-200">{results[0].Location}</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="mt-6 md:mt-8 p-4 bg-amber-900/30 rounded-xl border border-amber-500/30 flex items-center gap-3 backdrop-blur-sm">
-                                    <div className="bg-amber-900/50 p-2 rounded-full">
-                                        <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                                <div className="mt-6 md:mt-8 p-4 bg-emerald-900/30 rounded-xl border border-emerald-500/30 flex items-center gap-3 backdrop-blur-sm">
+                                    <div className="bg-emerald-900/50 p-2 rounded-full">
+                                        <svg className="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                                     </div>
                                     <div>
-                                        <p className="text-amber-400 font-bold text-sm md:text-base">Voter Eligibility Confirmed</p>
-                                        <p className="text-amber-300/70 text-xs md:text-sm">This member is listed in the active voter database.</p>
+                                        <p className="text-emerald-400 font-bold text-sm md:text-base">Voter Eligibility Confirmed</p>
+                                        <p className="text-emerald-300/70 text-xs md:text-sm">This member is listed in the active voter database.</p>
                                     </div>
                                 </div>
                             </div>
