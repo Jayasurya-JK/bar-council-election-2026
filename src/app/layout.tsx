@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const cinzel = Cinzel({ subsets: ["latin"], variable: '--font-cinzel', weight: ['400', '700', '900'] });
 
 export const metadata: Metadata = {
     title: "Dr. Tai P. Pandian | Bar Council Election 2026",
@@ -33,7 +34,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={`${inter.className} ${cinzel.variable}`}>{children}</body>
         </html>
     );
 }

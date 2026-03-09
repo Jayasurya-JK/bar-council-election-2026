@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to CSV file
-const csvPath = path.join(__dirname, 'data.csv');
+const csvPath = path.join(__dirname, 'Final Data.csv');
 let csvData = [];
 
 // Function to read CSV file

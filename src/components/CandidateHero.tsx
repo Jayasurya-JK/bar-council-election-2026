@@ -7,13 +7,37 @@ export default function CandidateHero() {
         <section className="w-full px-4 md:px-8 lg:px-16 py-12 md:py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             <div className="max-w-6xl mx-auto">
                 {/* Title with Soft Gold Accent */}
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center mb-12 md:mb-16 leading-tight">
-                    <span className="bg-gradient-to-r from-amber-300/90 via-amber-200/90 to-amber-300/90 bg-clip-text text-transparent">
-                        Tamil Nadu & Puducherry
-                    </span>
-                    <br className="md:hidden" />
-                    <span className="text-white"> Bar Council Election 2026</span>
-                </h1>
+                <div className="text-center mb-8 md:mb-12">
+                    <h1 className="leading-tight font-bold flex flex-col items-center" style={{ fontFamily: "var(--font-cinzel), serif" }}>
+                        {/* Line 1: TAMILNADU & PUDUCHERRY — exact gold hue, classic spacing */}
+                        <span className="text-[1.15rem] sm:text-3xl md:text-5xl lg:text-6xl uppercase text-[#F3C651] whitespace-nowrap mb-1 tracking-[0.06em] sm:tracking-[0.08em]">
+                            Tamilnadu &amp; Puducherry
+                        </span>
+                        
+                        {/* Line 2: — BAR COUNCIL — separator */}
+                        <div className="flex items-center justify-center gap-3 sm:gap-5 my-2 sm:my-4">
+                            <span className="h-[1px] w-10 sm:w-16 bg-[#F3C651] opacity-70"></span>
+                            <span className="text-[0.85rem] sm:text-xl md:text-3xl lg:text-4xl uppercase text-[#F3C651] tracking-[0.3em] font-medium">
+                                Bar Council
+                            </span>
+                            <span className="h-[1px] w-10 sm:w-16 bg-[#F3C651] opacity-70"></span>
+                        </div>
+
+                        {/* Line 3: ELECTION 2026 — white, wider letter spacing */}
+                        <span className="text-[1.85rem] sm:text-4xl md:text-6xl lg:text-7xl uppercase text-white tracking-[0.15em] mt-1 font-bold">
+                            Election 2026
+                        </span>
+                    </h1>
+                </div>
+
+                {/* Subtitle: Check your name line with sharp SVG Checkbox */}
+                <p className="text-center text-white text-[0.95rem] sm:text-lg md:text-xl font-semibold mb-12 flex items-center justify-center gap-2.5 tracking-wide">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F3C651" strokeWidth="2" strokeLinecap="square" strokeLinejoin="miter" className="transform -translate-y-[1px]">
+                        <rect x="2" y="2" width="20" height="20" rx="1" ry="1"></rect>
+                        <polyline points="7 12 11 16 18 7"></polyline>
+                    </svg>
+                    Check your name in the final voter list
+                </p>
 
                 <div className="flex flex-col md:flex-row md:items-start md:gap-12 lg:gap-16">
                     {/* Image with Gold Ring */}

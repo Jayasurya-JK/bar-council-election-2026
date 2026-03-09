@@ -17,7 +17,7 @@ let cachedData: LawyerRecord[] | null = null;
 function loadCSVData(): LawyerRecord[] {
     if (cachedData) return cachedData;
 
-    const csvPath = path.join(process.cwd(), 'data.csv');
+    const csvPath = path.join(process.cwd(), 'Final Data.csv');
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
 
     // CSV has NO header row and uses TAB delimiter
