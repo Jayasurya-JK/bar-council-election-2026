@@ -20,21 +20,21 @@ function loadCSVData(): LawyerRecord[] {
     const csvPath = path.join(process.cwd(), 'Final Data.csv');
     const fileContent = fs.readFileSync(csvPath, 'utf-8');
 
-    // CSV has NO header row and uses TAB delimiter
+    // CSV uses standard comma delimiter and has a header row
     const result = Papa.parse(fileContent, {
         header: false,
-        delimiter: '\t',
         skipEmptyLines: true,
     });
 
     cachedData = result.data
+        .slice(1) // skip the header row
         .map((row: any) => ({
             EnrollmentNo: (row[0] || '').toString().trim(),
             Name: (row[1] || '').toString().trim(),
             Gender: (row[2] || '').toString().trim(),
-            FatherName: (row[3] || '').toString().trim(),
-            BarAssociation: (row[4] || '').toString().trim(),
-            Location: (row[5] || '').toString().trim(),
+            FatherName: 'N/A', // Not available in the new final data
+            BarAssociation: (row[3] || '').toString().trim(), // Mapping Membership Details here
+            Location: (row[4] || '').toString().trim(), // Mapping Address here
         }))
         .filter(row => row.EnrollmentNo && row.Name);
 
